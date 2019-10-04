@@ -1,0 +1,36 @@
+tarvitset:
+	Läppäri johon asennettu Ubuntu
+	RaspberryPi johon asennettu raspbian
+	WiFi hotspot esim. puhelin
+	Remmina-sovellus
+
+Yhdistä Raspberry ja Läppäri puhelimen WiFiin
+
+Mene raspberryn terminaaliin ja kirjoita komennot
+
+sudo apt-get update
+sudo apt-get install tightvncserver
+sinulta kysytään "countinue?" paina y (yes)
+
+nyt vnc(virtual network computing) on asennettu,
+se pitää saada pyörimään:
+
+vncserver :1
+
+tämän jälkeen kysytään salasanaa, jonka tarvitset kun yhdistät läppäriä 
+sinulta kysytään vielä "read-only" salasanaa. Vastaa tähän no
+
+vnc:n pitäisi olla nyt käynnissä
+
+Mene läppärille ja avaa sovellus Remmina
+(jos tätä ei ole, asenna se app storesta)
+
+Paina + merkkiä vasemmassa ylänurkassa
+Vaihda "Protocol" kohtaan RDP:n sijasta VNC
+Kirjoita "server" kohtaan raspberryn ip-osoite:1 (esim. 192.168.43.123:1)
+(ip-osoitteen löydät puhelimen WiFi hotspotin avulla
+yhdistetyt laitteet -> raspberrypi -> IP-osoite)
+Kirjoita salasana, jonka keksit aiemmin
+
+VALMIS!
+	
